@@ -179,8 +179,8 @@ html {
 .feature-list {
 	padding: 0;
 	margin: 0;
+	list-style: none;
 	counter-reset: section-counter;
-  list-style: none;
 }
 
 .feature-list > li {
@@ -212,7 +212,9 @@ html {
 .feature-list h3 {
 	position: relative;
 	padding-left: 26px;
-
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
 	font-size: 23px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -255,6 +257,88 @@ html {
 
 .feature-list > li:last-child p {
 	color: #ffffff;
+}
+
+
+
+/* ----------- Instructions ----------- */
+
+.actions-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	counter-reset: section-counter;
+}
+
+.actions-list > li {
+	margin-bottom: 65px;
+	counter-increment: section-counter;
+}
+
+.actions-list img {
+	width: initial;
+	height: initial;
+	max-width: 100%;
+}
+
+.actions-list h3 {
+	position: relative;
+	padding-top: 12px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #c1c1c1;
+}
+
+.actions-list h3::before {
+	content: "0" counter(section-counter);	
+	position: absolute;
+	top: -5em;
+	left: 0;
+
+	padding-left: 26px;
+	padding-right: 26px;
+	padding-top: 26px;
+	padding-bottom: 30px;
+
+	font-size: 14px;
+	line-height: 1em;
+	font-weight: 700;
+
+	background-color: #5e42b0;
+	color: #ffffff;
+}
+
+.actions-list h3::after {
+	content: '';
+	position: absolute;
+	top: -27px;
+	left: 25px;
+	width: 18px;
+	height: 4px;
+	background-color: #8f78ca;
+	border-radius: 2px;
+}
+
+/* tablet:
+top: -116px;
+
+padding-left: 44px;
+padding-right: 44px;
+padding-top: 40px;
+padding-bottom: 52px;
+
+font-size: 24px; */
+
+.actions-list p {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height: 1.2em;
 }
 
 
