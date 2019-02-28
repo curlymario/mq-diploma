@@ -9,6 +9,7 @@ html {
 }
 
 
+
 /* ========== MAIN PAGE ========== */
 
 /* ----------- Cover ----------- */
@@ -138,6 +139,124 @@ html {
 	height: 3em;
 	background-image: url(../img/play-icon.svg); 
 }
+
+
+
+/* ----------- Athlets and Players ----------- */
+
+.athlets,
+.players {
+	position: relative;
+}
+
+.athlets > img,
+.players > img {
+	position: relative;
+	top: 20px;
+
+	display: block;
+	margin: auto;
+}
+
+.athlets > img {
+	margin-bottom: -35px;
+}
+
+.section-title {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 0;
+
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	color: #e7e7e7;
+}
+
+.feature-list {
+	padding: 0;
+	margin: 0;
+	counter-reset: section-counter;
+  list-style: none;
+}
+
+.feature-list > li {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+
+	counter-increment: section-counter;
+}
+
+.feature-list > li:first-child {
+	padding-top: 75px;
+	background-color: #fafafa;
+}
+
+.feature-list > li:nth-child(2) {
+	background-color: #f5f4f9;
+}
+
+.athlets .feature-list > li:last-child {
+	background-color: #5e3db3;
+}
+
+.players .feature-list > li:last-child {
+	background-color: #090a36;
+}
+
+.feature-list h3 {
+	position: relative;
+	padding-left: 26px;
+
+	font-size: 23px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #c1c1c1;
+}
+
+.feature-list h3::before {
+	content: "0" counter(section-counter);	
+	position: absolute;
+	top: 2px;
+	left: 0;
+	font-size: 14px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.players .feature-list > li:last-child h3::before {
+	color: #5e3db3;
+}
+
+.feature-list h3::after {
+	content: '';
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	width: 18px;
+	height: 4px;
+	background-color: #5e3db3;
+	border-radius: 2px;
+}
+
+.feature-list > li:last-child h3::after {
+	background-color: #ffffff;
+}
+
+.feature-list p {
+	font-size: 15px;
+	line-height: 1.2em;
+}
+
+.feature-list > li:last-child p {
+	color: #ffffff;
+}
+
+
 
  /* ========== UTILITIES ========== */
 
