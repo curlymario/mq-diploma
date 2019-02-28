@@ -39,7 +39,7 @@ html {
 }
 
 .cover::after {
-	background-color: #090d41;
+	background-color: #090a36;
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -110,11 +110,12 @@ html {
 
 .btn:hover,
 .btn:focus {
+	outline: 0;
 	background-color: #7452cc;
 }
 
 .btn:active {
-	background-color: #212449;
+	background-color: #090a36;
 }
 
 .btn p::before {
