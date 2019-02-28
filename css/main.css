@@ -1,10 +1,145 @@
  /* ========== BASE ========== */
 
- html { box-sizing: border-box; }
- *, *:before, *:after { box-sizing: inherit; }
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+	font-family: 'Open Sans', Verdana, sans-serif;
+	letter-spacing: 0.05em;
+}
 
 
-/* ========== UTILITIES ========== */
+/* ========== MAIN PAGE ========== */
+
+/* ----------- Cover ----------- */
+
+.cover {
+	position: relative;
+	min-height: 568px;
+	padding: 20px;
+
+	color: #ffffff;
+}
+
+.cover::before,
+.cover::after {
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cover::before {
+	background-image: url(../img/football_767.jpg);
+	background-size: cover;
+	z-index: -2;
+}
+
+.cover::after {
+	background-color: #090d41;
+	opacity: 0.9;
+	z-index: -1;
+}
+
+.logotype {
+	width: 133px;
+	height: 36px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cover-tagline {
+	margin-top: 135px;
+	margin-bottom: 90px;
+
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.cover-tagline span {
+	display: block;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.cover span:nth-child(2) {
+	padding-left: 45px;
+}
+
+.download-links {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 64px;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-top: 1.75em;
+	margin-bottom: 1.75em;
+
+	font-size: 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #5e3db3;
+	border-radius: 2.2em;
+}
+
+.btn p {
+	position: relative;
+	max-width: 15em;
+	padding-left: 3.65em;
+	margin: auto;
+
+	color: #ffffff;
+	fill: #ffffff;
+}
+
+.btn span {
+	display: block;
+	font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: #7452cc;
+}
+
+.btn:active {
+	background-color: #212449;
+}
+
+.btn p::before {
+	content:'';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.btn-download-apple p::before { 
+	width: 2.5em;
+	height: 3.25em;
+	background-image: url(../img/apple-icon.svg); 
+}
+
+.btn-download-play p::before { 
+	width: 2.75em;
+	height: 3em;
+	background-image: url(../img/play-icon.svg); 
+}
+
+ /* ========== UTILITIES ========== */
 
 .visually-hidden {
 	position: absolute !important;
