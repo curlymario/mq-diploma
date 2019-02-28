@@ -221,6 +221,7 @@ html {
 	color: #c1c1c1;
 }
 
+/* Нумерация */
 .feature-list h3::before {
 	content: "0" counter(section-counter);	
 	position: absolute;
@@ -235,16 +236,26 @@ html {
 	color: #5e3db3;
 }
 
+/* Подчёркивание номера */
 .feature-list h3::after {
 	content: '';
 	position: absolute;
 	bottom: 4px;
 	left: 0;
-	width: 18px;
+	width: 17px;
 	height: 4px;
 	background-color: #5e3db3;
 	border-radius: 2px;
 }
+
+/* 
+TO DO:
+Найти более аккуратное решение подчёркивания,
+так чтобы оно тянулось по ширине номера.
+Желательно, не добавляя лишних элементов
+в разметку.
+*/
+
 
 .feature-list > li:last-child h3::after {
 	background-color: #ffffff;
@@ -294,6 +305,7 @@ html {
 	color: #c1c1c1;
 }
 
+/* Нумерация */
 .actions-list h3::before {
 	content: "0" counter(section-counter);	
 	position: absolute;
@@ -313,12 +325,13 @@ html {
 	color: #ffffff;
 }
 
+/* Подчёркивание номера */
 .actions-list h3::after {
 	content: '';
 	position: absolute;
 	top: -27px;
-	left: 25px;
-	width: 18px;
+	left: 26px;
+	width: 17px;
 	height: 4px;
 	background-color: #8f78ca;
 	border-radius: 2px;
