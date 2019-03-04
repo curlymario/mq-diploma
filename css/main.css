@@ -110,7 +110,7 @@ html {
 	fill: #ffffff;
 }
 
-.btn span {
+.btn-label span {
 	display: block;
 	font-weight: 700;
 }
@@ -157,8 +157,7 @@ html {
 	position: relative;
 }
 
-.athlets > img,
-.players > img {
+.section-img {
 	position: relative;
 	top: 20px;
 
@@ -166,7 +165,9 @@ html {
 	margin: auto;
 }
 
-.athlets > img {
+.athlets-img {
+	width: 192px;
+	height: 281px;
 	margin-bottom: -35px;
 }
 
@@ -294,9 +295,10 @@ TO DO:
 }
 
 .actions-list img {
-	width: initial;
-	height: initial;
+	display: block;
+	min-height: 120px;
 	max-width: 100%;
+	height: auto;
 }
 
 .actions-list h3 {
