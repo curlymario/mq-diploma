@@ -53,8 +53,11 @@ html {
 }
 
 .cover-tagline {
+	max-width: 415px;
 	margin-top: 135px;
 	margin-bottom: 90px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 20px;
 	padding-right: 20px;
 
