@@ -1,464 +1,465 @@
  /* ========== BASE ========== */
 
-html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: inherit; }
-
-html {
-	font-family: 'Open Sans', Verdana, sans-serif;
-	letter-spacing: 0.05em;
-}
-
-
-
-/* ========== MAIN PAGE ========== */
-
-/* ----------- Cover ----------- */
-
-.cover {
-	position: relative;
-	min-height: 568px;
-	padding-top: 20px;
-
-	color: #ffffff;
-}
-
-.cover::before,
-.cover::after {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.cover::before {
-	background-image: url(../img/football_767.jpg);
-	background-size: cover;
-	z-index: -2;
-}
-
-.cover::after {
-	background-color: #090a36;
-	opacity: 0.9;
-	z-index: -1;
-}
-
-.logotype {
-	width: 133px;
-	height: 36px;
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.cover-tagline {
-	max-width: 415px;
-	margin-top: 135px;
-	margin-bottom: 90px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-
-	font-size: 28px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-.cover-tagline span {
-	display: block;
-	margin-top: 24px;
-	margin-bottom: 24px;
-}
-
-.cover span:nth-child(2) {
-	padding-left: 45px;
-}
-
-.download-links {
-	width: 100%;
-	padding-right: 20px;
-	padding-left: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 64px;
-}
-
-.btn {
-	display: block;
-	width: 100%;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	margin-top: 1.75em;
-	margin-bottom: 1.75em;
-
-	font-size: 8px;
-	text-decoration: none;
-	text-transform: uppercase;
-	background-color: #5e3db3;
-	border-radius: 2.2em;
-}
-
-.btn p {
-	position: relative;
-	max-width: 15em;
-	padding-left: 3.65em;
-	margin: auto;
-
-	color: #ffffff;
-	fill: #ffffff;
-}
-
-.btn-label span {
-	display: block;
-	font-weight: 700;
-}
-
-.btn:hover,
-.btn:focus {
-	outline: 0;
-	background-color: #7452cc;
-}
-
-.btn:active {
-	background-color: #090a36;
-}
-
-.btn p::before {
-	content:'';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-.btn-download-apple p::before { 
-	width: 2.5em;
-	height: 3.25em;
-	background-image: url(../img/apple-icon.svg); 
-}
-
-.btn-download-play p::before { 
-	width: 2.75em;
-	height: 3em;
-	background-image: url(../img/play-icon.svg); 
-}
-
-
-
-/* ----------- Athlets and Players ----------- */
-
-.athlets,
-.players {
-	position: relative;
-}
-
-.section-img {
-	position: relative;
-	top: 20px;
-
-	display: block;
-	margin: auto;
-}
-
-.athlets-img {
-	width: 192px;
-	height: 281px;
-	margin-bottom: -35px;
-}
-
-.section-title {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
-	margin-bottom: 0;
-
-	font-size: 50px;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0;
-	color: #e7e7e7;
-}
-
-.feature-list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	counter-reset: section-counter;
-}
-
-.feature-list > li {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 30px;
-	padding-bottom: 40px;
-
-	counter-increment: section-counter;
-}
-
-.feature-list > li:first-child {
-	padding-top: 75px;
-	background-color: #fafafa;
-}
-
-.feature-list > li:nth-child(2) {
-	background-color: #f5f4f9;
-}
-
-.athlets .feature-list > li:last-child {
-	background-color: #5e3db3;
-}
-
-.players .feature-list > li:last-child {
-	background-color: #090a36;
-}
-
-.feature-list h3 {
-	position: relative;
-	padding-left: 26px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	
-	font-size: 23px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #c1c1c1;
-}
-
-/* Нумерация */
-.feature-list h3::before {
-	content: "0" counter(section-counter);	
-	position: absolute;
-	top: 2px;
-	left: 0;
-	font-size: 14px;
-	font-weight: 700;
-	color: #000000;
-}
-
-.players .feature-list > li:last-child h3::before {
-	color: #5e3db3;
-}
-
-/* Подчёркивание номера */
-.feature-list h3::after {
-	content: '';
-	position: absolute;
-	bottom: 4px;
-	left: 0;
-	width: 17px;
-	height: 4px;
-	background-color: #5e3db3;
-	border-radius: 2px;
-}
-
-/* 
-TO DO:
-Найти более аккуратное решение подчёркивания,
-так чтобы оно тянулось по ширине номера.
-Желательно, не добавляя лишних элементов
-в разметку.
-*/
-
-
-.feature-list > li:last-child h3::after {
-	background-color: #ffffff;
-}
-
-.feature-list p {
-	font-size: 15px;
-	line-height: 1.2em;
-}
-
-.feature-list > li:last-child p {
-	color: #ffffff;
-}
-
-
-
-/* ----------- Instructions ----------- */
-
-.actions-list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	counter-reset: section-counter;
-}
-
-.actions-list > li {
-	margin-bottom: 65px;
-	counter-increment: section-counter;
-}
-
-.actions-list img {
-	display: block;
-	min-height: 120px;
-	max-width: 100%;
-	height: auto;
-}
-
-.actions-list h3 {
-	position: relative;
-	padding-top: 12px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 20px;
-
-	font-size: 28px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #c1c1c1;
-}
-
-/* Нумерация */
-.actions-list h3::before {
-	content: "0" counter(section-counter);	
-	position: absolute;
-	top: -5em;
-	left: 0;
-
-	padding-left: 26px;
-	padding-right: 26px;
-	padding-top: 26px;
-	padding-bottom: 30px;
-
-	font-size: 14px;
-	line-height: 1em;
-	font-weight: 700;
-
-	background-color: #5e42b0;
-	color: #ffffff;
-}
-
-/* Подчёркивание номера */
-.actions-list h3::after {
-	content: '';
-	position: absolute;
-	top: -27px;
-	left: 26px;
-	width: 17px;
-	height: 4px;
-	background-color: #8f78ca;
-	border-radius: 2px;
-}
-
-/* tablet:
-top: -116px;
-
-padding-left: 44px;
-padding-right: 44px;
-padding-top: 40px;
-padding-bottom: 52px;
-
-font-size: 24px; */
-
-.actions-list p {
-	margin-left: 20px;
-	margin-right: 20px;
-	font-size: 16px;
-	line-height: 1.2em;
-}
-
-
-
-/* ----------- Footer ----------- */
-
-footer {
-	position: relative;
-	min-height: 568px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-
-	color: #ffffff;
-}
-
-footer::before,
-footer::after {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-footer::before {
-	background-image: url(../img/game_767.jpg);
-	background-size: cover;
-	z-index: -2;
-}
-
-footer::after {
-	background-color: #090a36;
-	opacity: 0.9;
-	z-index: -1;
-}
-
-.logomark {
-	width: 72px;
-	padding-top: 12px;
-	padding-bottom: 12px;
-
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 79px;
-	margin-bottom: 55px;
-
-	background-color: #5e3db3;
-  background: -webkit-linear-gradient(to bottom, #7751db, #50329c);
-	background: linear-gradient(to bottom, #7751db, #50329c);
-	border-radius: 22px;
-}
-
-.logomark img {
-	display: block;
-	width: 57px;
-	height: 47px;
-
-	margin-left: auto;
-	margin-right: auto;
-}
-
-footer h2 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-
-	text-align: center;
-	font-size: 32px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #ffffff;
-}
-
-.footer-tagline {
-	margin-top: 10px;
-	margin-bottom: 75px;
-
-	text-align: center;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #9b8dc3;
-}
-
-.footer-logo {
-	margin-top: 82px;
-}
-
-
-
- /* ========== UTILITIES ========== */
-
-.visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
-}
+ html { box-sizing: border-box; }
+ *, *:before, *:after { box-sizing: inherit; }
+ 
+ html {
+   font-family: 'Open Sans', Verdana, sans-serif;
+   letter-spacing: 0.05em;
+ }
+ 
+ 
+ 
+ /* ========== MAIN PAGE ========== */
+ 
+ /* ----------- Cover ----------- */
+ 
+ .cover {
+   position: relative;
+   min-height: 568px;
+   padding-top: 20px;
+ 
+   color: #ffffff;
+ }
+ 
+ .cover::before,
+ .cover::after {
+   content:'';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .cover::before {
+   background-image: url(../img/football_767.jpg);
+   background-size: cover;
+   z-index: -2;
+ }
+ 
+ .cover::after {
+   background-color: #090a36;
+   opacity: 0.9;
+   z-index: -1;
+ }
+ 
+ .logotype {
+   width: 133px;
+   height: 36px;
+   margin-top: 20px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ .cover-tagline {
+   max-width: 415px;
+   margin-top: 135px;
+   margin-bottom: 90px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 20px;
+   padding-right: 20px;
+ 
+   font-size: 28px;
+   font-weight: 700;
+   text-transform: uppercase;
+ }
+ 
+ .cover-tagline span {
+   display: block;
+   margin-top: 24px;
+   margin-bottom: 24px;
+ }
+ 
+ .cover span:nth-child(2) {
+   padding-left: 45px;
+ }
+ 
+ .download-links {
+   width: 100%;
+   padding-right: 20px;
+   padding-left: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 64px;
+ }
+ 
+ .btn {
+   display: block;
+   width: 100%;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   margin-top: 1.75em;
+   margin-bottom: 1.75em;
+ 
+   font-size: 8px;
+   text-decoration: none;
+   text-transform: uppercase;
+   background-color: #5e3db3;
+   border-radius: 2.2em;
+ }
+ 
+ .btn-label {
+   position: relative;
+   display: block;
+   max-width: 15em;
+   padding-left: 3.65em;
+   margin: auto;
+ 
+   color: #ffffff;
+   fill: #ffffff;
+ }
+ 
+ .btn-label span {
+   display: block;
+   font-weight: 700;
+ }
+ 
+ .btn:hover,
+ .btn:focus {
+   outline: 0;
+   background-color: #7452cc;
+ }
+ 
+ .btn:active {
+   background-color: #090a36;
+ }
+ 
+ .btn-label::before {
+   content:'';
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+ 
+   background-repeat: no-repeat;
+   background-size: contain;
+ }
+ 
+ .btn-download-apple .btn-label::before { 
+   width: 2.5em;
+   height: 3.25em;
+   background-image: url(../img/apple-icon.svg); 
+ }
+ 
+ .btn-download-play .btn-label::before { 
+   width: 2.75em;
+   height: 3em;
+   background-image: url(../img/play-icon.svg); 
+ }
+ 
+ 
+ 
+ /* ----------- Athlets and Players ----------- */
+ 
+ .athlets,
+ .players {
+   position: relative;
+ }
+ 
+ .section-img {
+   position: relative;
+   top: 20px;
+ 
+   display: block;
+   margin: auto;
+ }
+ 
+ .athlets-img {
+   width: 192px;
+   height: 281px;
+   margin-bottom: -35px;
+ }
+ 
+ .section-title {
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 20px;
+   margin-bottom: 0;
+ 
+   font-size: 50px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0;
+   color: #e7e7e7;
+ }
+ 
+ .feature-list {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   counter-reset: section-counter;
+ }
+ 
+ .feature-list > li {
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 30px;
+   padding-bottom: 40px;
+ 
+   counter-increment: section-counter;
+ }
+ 
+ .feature-list > li:first-child {
+   padding-top: 75px;
+   background-color: #fafafa;
+ }
+ 
+ .feature-list > li:nth-child(2) {
+   background-color: #f5f4f9;
+ }
+ 
+ .athlets .feature-list > li:last-child {
+   background-color: #5e3db3;
+ }
+ 
+ .players .feature-list > li:last-child {
+   background-color: #090a36;
+ }
+ 
+ .feature-list h3 {
+   position: relative;
+   padding-left: 26px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   
+   font-size: 23px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #c1c1c1;
+ }
+ 
+ /* Нумерация */
+ .feature-list h3::before {
+   content: "0" counter(section-counter);	
+   position: absolute;
+   top: 2px;
+   left: 0;
+   font-size: 14px;
+   font-weight: 700;
+   color: #000000;
+ }
+ 
+ .players .feature-list > li:last-child h3::before {
+   color: #5e3db3;
+ }
+ 
+ /* Подчёркивание номера */
+ .feature-list h3::after {
+   content: '';
+   position: absolute;
+   bottom: 4px;
+   left: 0;
+   width: 17px;
+   height: 4px;
+   background-color: #5e3db3;
+   border-radius: 2px;
+ }
+ 
+ /* 
+ TO DO:
+ Найти более аккуратное решение подчёркивания,
+ так чтобы оно тянулось по ширине номера.
+ Желательно, не добавляя лишних элементов
+ в разметку.
+ */
+ 
+ 
+ .feature-list > li:last-child h3::after {
+   background-color: #ffffff;
+ }
+ 
+ .feature-list p {
+   font-size: 15px;
+   line-height: 1.2em;
+ }
+ 
+ .feature-list > li:last-child p {
+   color: #ffffff;
+ }
+ 
+ 
+ 
+ /* ----------- Instructions ----------- */
+ 
+ .actions-list {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   counter-reset: section-counter;
+ }
+ 
+ .actions-list > li {
+   margin-bottom: 65px;
+   counter-increment: section-counter;
+ }
+ 
+ .actions-list img {
+   display: block;
+   min-height: 120px;
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ .actions-list h3 {
+   position: relative;
+   padding-top: 12px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 20px;
+ 
+   font-size: 28px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #c1c1c1;
+ }
+ 
+ /* Нумерация */
+ .actions-list h3::before {
+   content: "0" counter(section-counter);	
+   position: absolute;
+   top: -5em;
+   left: 0;
+ 
+   padding-left: 26px;
+   padding-right: 26px;
+   padding-top: 26px;
+   padding-bottom: 30px;
+ 
+   font-size: 14px;
+   line-height: 1em;
+   font-weight: 700;
+ 
+   background-color: #5e42b0;
+   color: #ffffff;
+ }
+ 
+ /* Подчёркивание номера */
+ .actions-list h3::after {
+   content: '';
+   position: absolute;
+   top: -27px;
+   left: 26px;
+   width: 17px;
+   height: 4px;
+   background-color: #8f78ca;
+   border-radius: 2px;
+ }
+ 
+ /* tablet:
+ top: -116px;
+ 
+ padding-left: 44px;
+ padding-right: 44px;
+ padding-top: 40px;
+ padding-bottom: 52px;
+ 
+ font-size: 24px; */
+ 
+ .actions-list p {
+   margin-left: 20px;
+   margin-right: 20px;
+   font-size: 16px;
+   line-height: 1.2em;
+ }
+ 
+ 
+ 
+ /* ----------- Footer ----------- */
+ 
+ footer {
+   position: relative;
+   min-height: 568px;
+   padding-top: 20px;
+   padding-bottom: 10px;
+ 
+   color: #ffffff;
+ }
+ 
+ footer::before,
+ footer::after {
+   content:'';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ footer::before {
+   background-image: url(../img/game_767.jpg);
+   background-size: cover;
+   z-index: -2;
+ }
+ 
+ footer::after {
+   background-color: #090a36;
+   opacity: 0.9;
+   z-index: -1;
+ }
+ 
+ .logomark {
+   width: 72px;
+   padding-top: 12px;
+   padding-bottom: 12px;
+ 
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 79px;
+   margin-bottom: 55px;
+ 
+   background-color: #5e3db3;
+   background: -webkit-linear-gradient(to bottom, #7751db, #50329c);
+   background: linear-gradient(to bottom, #7751db, #50329c);
+   border-radius: 22px;
+ }
+ 
+ .logomark img {
+   display: block;
+   width: 57px;
+   height: 47px;
+ 
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ footer h2 {
+   margin-top: 10px;
+   margin-bottom: 10px;
+ 
+   text-align: center;
+   font-size: 32px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #ffffff;
+ }
+ 
+ .footer-tagline {
+   margin-top: 10px;
+   margin-bottom: 75px;
+ 
+   text-align: center;
+   font-size: 14px;
+   text-transform: uppercase;
+   color: #9b8dc3;
+ }
+ 
+ .footer-logo {
+   margin-top: 82px;
+ }
+ 
+ 
+ 
+  /* ========== UTILITIES ========== */
+ 
+ .visually-hidden {
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+   clip: rect(1px, 1px, 1px, 1px);
+   padding:0 !important;
+   border:0 !important;
+   height: 1px !important; 
+   width: 1px !important; 
+   overflow: hidden;
+ }
