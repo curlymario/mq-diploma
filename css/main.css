@@ -150,70 +150,70 @@
  }
 
 
- @media (min-width: 767px) {
-  .cover {
-    background-image: url(../img/football_1280.jpg);
+  @media (min-width: 767px) {
+    .cover {
+      background-image: url(../img/football_1280.jpg);
+    }
+
+    .logotype {
+      width: 205px;
+      height: 56px;
+    }
+
+    .cover-tagline {
+      margin-top: 2.6em;
+      margin-bottom: 4.9em;
+      max-width: 10em;
+
+      font-size: 64px;
+    }
+
+    .cover-tagline span {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .download-links {
+      width: 728px;
+      padding-right: 24px;
+      padding-left: 24px;
+      margin-bottom: 70px;
+
+      display: flex;
+    }
+
+    .btn {
+      width: 310px;
+      padding-top: 1.6em;
+      padding-bottom: 1.6em;
+      margin: 1.1em;
+
+      font-size: 14px;
+      border-radius: 5.5em;
+    }
+
+    .btn-label {
+      margin: auto;
+    }
+
+    .btn-download-apple .btn-label {
+      padding-left: 4em;
+    }
+
+    .btn-download-play .btn-label {
+      padding-left: 5em;
+    }
+
+    .btn-download-apple .btn-label::before {
+      width: 3em;
+      height: 3.5em;
+    }
+
+    .btn-download-play .btn-label::before {
+      width: 3em;
+      height: 3.215em;
+    }
   }
-
-  .logotype {
-    width: 205px;
-    height: 56px;
-  }
-
-  .cover-tagline {
-    margin-top: 2.6em;
-    margin-bottom: 4.9em;
-    max-width: 10em;
-
-    font-size: 64px;
-  }
-
-  .cover-tagline span {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .download-links {
-    width: 728px;
-    padding-right: 24px;
-    padding-left: 24px;
-    margin-bottom: 70px;
-
-    display: flex;
-  }
-
-  .btn {
-    width: 310px;
-    padding-top: 1.6em;
-    padding-bottom: 1.6em;
-    margin: 1.1em;
-
-    font-size: 14px;
-    border-radius: 5.5em;
-  }
-
-  .btn-label {
-    margin: auto;
-  }
-
-  .btn-download-apple .btn-label {
-    padding-left: 4em;
-  }
-
-  .btn-download-play .btn-label {
-    padding-left: 5em;
-  }
-
-  .btn-download-apple .btn-label::before {
-    width: 3em;
-    height: 3.5em;
-  }
-
-  .btn-download-play .btn-label::before {
-    width: 3em;
-    height: 3.215em;
-  }
- }
 
 
  /* ----------- Athlets and Players ----------- */
@@ -223,27 +223,28 @@
    position: relative;
  }
 
- .section-img {
+ .athlets img,
+ .players img {
    position: relative;
+   min-height: 100px;
    top: 20px;
 
    display: block;
    margin: auto;
  }
 
- .athlets-img {
-   width: 192px;
-   height: 281px;
+ .athlets img {
    margin-bottom: -35px;
  }
 
  .section-title {
-   margin-left: 20px;
-   margin-right: 20px;
-   margin-top: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: 15px;
    margin-bottom: 0;
 
    font-size: 50px;
+   line-height: 1em;
    font-weight: 700;
    text-transform: uppercase;
    letter-spacing: 0;
@@ -260,8 +261,8 @@
  .feature-list > li {
    padding-left: 20px;
    padding-right: 20px;
-   padding-top: 30px;
-   padding-bottom: 40px;
+   padding-top: 20px;
+   padding-bottom: 20px;
 
    counter-increment: section-counter;
  }
@@ -286,10 +287,12 @@
  .feature-list h3 {
    position: relative;
    padding-left: 26px;
-   margin-top: 20px;
+   margin-top: 30px;
    margin-bottom: 20px;
 
    font-size: 23px;
+   line-height: 1em;
+   vertical-align: top;
    font-weight: 700;
    text-transform: uppercase;
    color: #c1c1c1;
@@ -299,9 +302,10 @@
  .feature-list h3::before {
    content: "0" counter(section-counter);
    position: absolute;
-   top: 2px;
+   top: 0;
    left: 0;
    font-size: 14px;
+   line-height: 1.2em;
    font-weight: 700;
    color: #000000;
  }
@@ -314,7 +318,7 @@
  .feature-list h3::after {
    content: '';
    position: absolute;
-   bottom: 4px;
+   bottom: 2px;
    left: 0;
    width: 17px;
    height: 4px;
@@ -330,18 +334,98 @@
  в разметку.
  */
 
-
  .feature-list > li:last-child h3::after {
    background-color: #ffffff;
  }
 
  .feature-list p {
+   margin-bottom: 35px;
+
    font-size: 15px;
    line-height: 1.2em;
  }
 
  .feature-list > li:last-child p {
    color: #ffffff;
+ }
+
+
+  @media (min-width: 767px) {
+    .athlets,
+    .players {
+      padding-top: 48px;
+    }
+
+    .athlets img {
+      position: absolute;
+      top: 95px;
+      left: -150px;
+    }
+
+    .players img { 
+      position: absolute;
+      top: 40px; 
+      right: 0;
+    }
+
+    .feature-list > li:first-child {
+      padding-top: 20px;
+      background-color: #ffffff;
+    }
+
+    .athlets .section-title,
+    .athlets h3,
+    .athlets p {
+      max-width: 444px;
+      margin-left: 291px;
+      margin-right: auto;
+    }
+
+    .players .section-title,
+    .players h3,
+    .players p {
+      max-width: 430px;
+    }
+
+    .section-title {
+      margin-top: 25px;
+      margin-bottom: 20px;
+      
+      font-size: 80px;
+    }
+
+    .feature-list h3 {
+      margin-top: 20px;
+      padding-left: 30px;
+      font-size: 32px;
+    }
+
+    .feature-list h3::before {
+      margin-bottom: 26px;
+
+      font-size: 18px;
+    }
+
+    .feature-list h3::after {
+      bottom: 4px;
+      width: 21px;
+      height: 5px;
+      border-radius: 2.5px;
+    }
+
+    .feature-list p {
+      margin-bottom: 9px;
+
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    .athlets li:last-child p {
+      font-size: 18px;
+    }
+
+
+
  }
 
 
