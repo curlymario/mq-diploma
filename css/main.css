@@ -406,6 +406,7 @@
     .athlets,
     .players {
       padding-top: 28px;
+      overflow: hidden;
     }
 
     .athlets img {
@@ -693,6 +694,104 @@
   }
  }
 
+
+ @media (min-width: 1280px) {
+   .actions-list li { 
+      margin: 0;
+      display: flex;
+      align-items: center;
+   }
+
+   .actions-list picture,
+   .action-descript {
+      flex-basis: 50%;
+   }
+
+   .actions-list picture {
+     overflow: hidden;
+   }
+
+   .actions-list img {
+    width: 100%;
+  }
+
+   .action-descript {
+     margin-right: auto;
+     margin-left: 0;
+   }
+
+   .actions-list h3,
+   .actions-list p {
+     max-width: 780px;
+     padding-top: 0;
+     padding-bottom: 0;
+     padding-left: 130px;
+     padding-right: 15px;
+     margin-left: 0;
+     margin-right: auto;
+     margin-top: 0;
+   }
+
+   .actions-list h3 {
+    margin-bottom: 70px;
+   }
+
+   .actions-list h3::before {
+    top: 50%;
+    left: 0;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 75px;
+
+    transform: translate(-50%, -50%);
+ 
+    font-size: 24px;
+  }
+
+  .actions-list h3::after {
+    top: calc(50% + 12px);
+    left: 0;
+    width: 28px;
+    height: 5px;
+    border-radius: 2.5px;
+
+    transform: translateX(-50%);
+  }
+
+   .actions-list p {
+    margin-bottom: 0;
+   }
+
+   .actions-list li:nth-child(2) picture {
+     order: 2;
+   }
+
+   .actions-list li:nth-child(2) .action-descript {
+     order: 1;
+   }
+   
+  
+   .actions-list li:nth-child(2) h3,
+   .actions-list li:nth-child(2) p {
+     padding-left: 15px;
+     padding-right: 130px;
+     margin-right: 0;
+     margin-left: auto;
+   }
+
+   .actions-list li:nth-child(2) h3::before {
+    left: auto;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .actions-list li:nth-child(2) h3::after {
+    left: auto;
+    right: 0;
+    transform: translateX(50%);
+  }
+ }
 
 
  /* ----------- Footer ----------- */
