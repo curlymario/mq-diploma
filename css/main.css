@@ -48,7 +48,7 @@
  .logotype {
    width: 133px;
    height: 36px;
-   margin-top: 20px;
+   margin-top: 13px;
    margin-left: auto;
    margin-right: auto;
  }
@@ -164,11 +164,12 @@
     .logotype {
       width: 205px;
       height: 56px;
+      margin-top: 19px;
     }
 
     .cover-tagline {
-      margin-top: 2.6em;
-      margin-bottom: 4.9em;
+      margin-top: 167px;
+      margin-bottom: 290px;
       max-width: 10em;
 
       font-size: 64px;
@@ -180,7 +181,7 @@
     }
 
     .download-links {
-      width: 728px;
+      max-width: 728px;
       padding-right: 24px;
       padding-left: 24px;
       margin-bottom: 70px;
@@ -218,6 +219,51 @@
     .btn-download-play .btn-label::before {
       width: 3em;
       height: 3.215em;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .cover::before {
+      background-image: url(../img/football_1920.jpg);
+    }
+
+    .logotype {
+      width: 191px;
+      height: 52px;
+      margin-top: 25px;
+    }
+
+    .cover-tagline {
+      margin-top: 283px;
+      margin-bottom: 186px;
+      padding-left: 15px;
+      padding-right: 15px;
+      max-width: 1558px;
+
+      font-size: 90px;
+      line-height: 1;
+    }
+
+    .cover-tagline span {
+      margin-bottom: 25px;
+    }
+
+    .cover-tagline span:last-child {
+      text-align: right;
+    }
+
+    .download-links {
+      max-width: 722px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 90px;
+    }
+
+    .btn {
+      margin: 1.8em;
+
+      font-size: 14px;
+      border-radius: 5.5em;
     }
   }
 
@@ -436,6 +482,7 @@
     }
  }
 
+ /* @media (min-width: 1024px) { */
 
 
  /* ----------- Instructions ----------- */
@@ -591,6 +638,11 @@
    z-index: -1;
  }
 
+ .branding-group {
+    margin-top: 79px;
+    margin-bottom: 75px;
+ }
+
  .logomark {
    width: 72px;
    padding-top: 12px;
@@ -598,7 +650,7 @@
 
    margin-left: auto;
    margin-right: auto;
-   margin-top: 79px;
+
    margin-bottom: 55px;
 
    background-color: #5e3db3;
@@ -617,7 +669,7 @@
  }
 
  footer h2 {
-   margin-top: 10px;
+   margin-top: 0;
    margin-bottom: 10px;
 
    text-align: center;
@@ -629,8 +681,8 @@
  }
 
  .footer-tagline {
-   margin-top: 10px;
-   margin-bottom: 75px;
+   margin-top: 0;
+   margin-bottom: 0;
 
    text-align: center;
    font-size: 14px;
@@ -640,6 +692,7 @@
 
  .footer-logo {
    margin-top: 82px;
+   margin-bottom: 0;
  }
 
 
@@ -648,11 +701,15 @@
     background-image: url(../img/game_1280.jpg);
   }
 
+  .branding-group {
+    margin-top: 106px;
+    margin-bottom: 280px;
+  }
+
   .logomark {
     width: 130px;
     padding-top: 26px;
     padding-bottom: 26px;
-    margin-top: 106px;
     margin-bottom: 72px;
  
     border-radius: 22px;
@@ -668,15 +725,53 @@
   }
 
   .footer-tagline {
-    margin-bottom: 280px;
-
     font-size: 36px;
     letter-spacing: 0;
   }
 
- .footer-logo {
-   margin-top: 55px;
+  .footer-logo {
+    margin-top: 55px;
+    margin-bottom: 13px;
+  }
  }
+
+ @media (min-width: 1280px) {
+  footer::before {
+    background-image: url(../img/game_1920.jpg);
+  }
+
+  .branding-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    max-width: 870px;
+    margin-top: 208px;
+    margin-bottom: 152px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logomark {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 37px;
+  }
+
+  footer h2 {
+    text-align: left;
+  }
+
+  .footer-tagline {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .footer-logo {
+    margin-top: 237px;
+    margin-bottom: 42px;
+  }
  }
 
 
