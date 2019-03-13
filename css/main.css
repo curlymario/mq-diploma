@@ -425,7 +425,7 @@
     }
 
     .feature-list p {
-      margin-bottom: 9px;
+      margin-bottom: 12px;
 
       font-size: 16px;
       line-height: 28px;
@@ -554,7 +554,6 @@
 
     font-size: 24px;
   }
-
  }
 
 
@@ -623,6 +622,7 @@
 
    text-align: center;
    font-size: 32px;
+   line-height: 1em;
    font-weight: 700;
    text-transform: uppercase;
    color: #ffffff;
@@ -642,6 +642,42 @@
    margin-top: 82px;
  }
 
+
+ @media (min-width: 767px) {
+  footer::before {
+    background-image: url(../img/game_1280.jpg);
+  }
+
+  .logomark {
+    width: 130px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-top: 106px;
+    margin-bottom: 72px;
+ 
+    border-radius: 22px;
+  }
+
+  .logomark img {
+    width: 104px;
+    height: 85px;
+  }
+
+  footer h2 {
+    font-size: 80px;
+  }
+
+  .footer-tagline {
+    margin-bottom: 280px;
+
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+ .footer-logo {
+   margin-top: 55px;
+ }
+ }
 
 
  /* ========== UTILITIES ========== */
