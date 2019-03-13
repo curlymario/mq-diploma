@@ -405,7 +405,7 @@
   @media (min-width: 767px) {
     .athlets,
     .players {
-      padding-top: 48px;
+      padding-top: 28px;
     }
 
     .athlets img {
@@ -422,7 +422,7 @@
 
     .feature-list > li:first-child {
       padding-top: 20px;
-      background-color: #ffffff;
+      background-color: transparent;
     }
 
     .athlets .section-title,
@@ -445,7 +445,7 @@
     }
 
     .section-title {
-      margin-top: 25px;
+      margin-top: 45px;
       margin-bottom: 20px;
       
       font-size: 80px;
@@ -477,12 +477,102 @@
       line-height: 28px;
     }
 
-    .athlets li:last-child p {
+    .players li:last-child p {
       font-size: 18px;
     }
  }
 
- /* @media (min-width: 1024px) { */
+
+ @media (min-width: 1024px) {
+   .athlets .wrapper,
+   .players .wrapper {
+      max-width: 1558px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .athlets img {
+    top: 28px;
+    left: 50%;
+    transform: translateX(-100%);
+  }
+
+   .athlets .section-title,
+   .athlets h3,
+   .athlets p {
+      max-width: 50%;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: 0;
+   }
+
+   .athlets .section-title,
+   .athlets p {
+     padding-left: 50px;
+   }
+
+   .athlets h3 {
+     padding-left: 80px;
+   }
+
+   .athlets h3::before,
+   .athlets h3::after {
+     left: 50px;
+   }
+
+   .players img {
+    top: 28px;
+    right: calc(50% + 150px);
+    transform: translateX(100%);
+  }
+
+   .players .section-title,
+   .players h3,
+   .players p {
+      max-width: 50%;
+      padding-right: 15px;
+      margin-left: 0;
+      margin-right: auto;
+   }
+
+   .players .section-title,
+   .players p {
+     padding-left: 15px;
+   }
+
+   .players h3 {
+    padding-left: 45px;
+   }
+
+   .players h3::before,
+   .players h3::after {
+     left: 15px;
+   }
+
+   .feature-list li {
+     padding-left: 0;
+     padding-right: 0;
+   }
+
+   .section-title {
+    margin-top: 75px;
+    margin-bottom: 55px;
+   }
+
+   .feature-list h3 {
+     margin-top: 35px;
+     font-size: 36px;
+   }
+
+   .feature-list h3::before {
+     top: 2px;
+   }
+
+   .feature-list p {
+     font-size: 20px;
+     margin-bottom: 35px;
+   }
+ }
 
 
  /* ----------- Instructions ----------- */
